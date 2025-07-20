@@ -8,19 +8,19 @@ interface taskProps{ //Props object to pass in component
   handleDelete: (id:string) => void;
 }
 const TaskCard = ({task, complete, handleDelete}: taskProps) => { //Task card
-  let status = task.complete? "complete":"incomplete"
+  let status = task.complete? "Complete":"Incomplete"
   return (
-    <View>
-      <Text>ID: {task.id}</Text>
-      <Text>DESC: {task.desc}</Text>
-    
-      <Text>Status: {status}</Text>
-      <TouchableOpacity onPress={() =>complete(task.id)}>
-        <Text>Complete Task</Text>
-      </TouchableOpacity>
-      <TouchableOpacity  onPress={() =>handleDelete(task.id)}>
-        <Text>Delete Task</Text>
-      </TouchableOpacity>
+    <View className='flex flex-row justify-between items-center bg-white p-4 rounded-lg mb-2'>
+      <Text className={task.complete?'line-through': ''}>{task.desc}</Text>
+      <Text>{status}</Text>
+      <View className='flex-col space-y-2'>
+        <TouchableOpacity onPress={() => complete(task.id)} className="bg-green-500 py-1 px-2 rounded">
+          <Text className="text-white text-sm text-center">Complete</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => handleDelete(task.id)} className="bg-red-500 py-1 px-2 rounded">
+          <Text className="text-white text-sm text-center">Delete</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   )
 }
