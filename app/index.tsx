@@ -33,6 +33,7 @@ function deleteTask(delID:string){
 }
   return (
     <View style ={{paddingTop:50}} className="flex-1">
+      <Text className="text-center">Simple Task Manager</Text>
       <TextInput 
         className="h-10 border"
         placeholder='Enter new task...'
@@ -46,6 +47,11 @@ function deleteTask(delID:string){
       >
         <Text className="text-white font-bold text-center">Add task</Text>
       </TouchableOpacity>
+      <View className="flex flex-row justify-between items-center p-4 border-b border-gray-300">
+        <Text>Task Name</Text>
+        <Text>Status</Text>
+        <Text>Actions</Text>
+      </View>
       <ScrollView>
         {tasks.map((taskElement) => (
         <TaskCard key = {taskElement.id} task = {taskElement} 
