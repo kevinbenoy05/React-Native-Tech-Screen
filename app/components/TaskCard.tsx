@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
+import Icon from 'react-native-vector-icons/Feather';
 import { Task } from '../../types';
 
 interface taskProps{ //Props object to pass in component
@@ -10,15 +11,19 @@ interface taskProps{ //Props object to pass in component
 const TaskCard = ({task, complete, handleDelete}: taskProps) => { //Task card
   let status = task.complete? "Complete":"Incomplete"
   return (
-    <View className='flex flex-row justify-between items-center bg-white p-4 rounded-lg mb-2'>
-      <Text className={task.complete?'line-through': ''}>{task.desc}</Text>
-      <Text>{status}</Text>
-      <View className='flex-col space-y-2'>
-        <TouchableOpacity onPress={() => complete(task.id)} className="bg-green-500 py-1 px-2 rounded">
-          <Text className="text-white text-sm text-center">Complete</Text>
+    <View className='flex flex-row justify-between items-center bg-white p-4 rounded-lg mb-3 shadow'>
+      <Text className={`w-2/4 ${task.complete ? 'line-through text-gray-500' : 'text-gray-800'}`}>
+       {task.desc}
+      </Text>
+      <Text className={`w-1/4 text-center font-semibold ${task.complete ? 'text-green-600' : 'text-yellow-600'}`}>
+        {status}
+      </Text>     
+      <View className='w-1/4 flex-row justify-center space-x-4'>
+        <TouchableOpacity onPress={() => complete(task.id)} className="bg-green-500 p-2 rounded-full">
+          <Icon name="check" size={20} color="white" />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => handleDelete(task.id)} className="bg-red-500 py-1 px-2 rounded">
-          <Text className="text-white text-sm text-center">Delete</Text>
+        <TouchableOpacity onPress={() => handleDelete(task.id)} className="bg-red-500 p-2 rounded-full">
+          <Icon name="trash-2" size={20} color="white" />
         </TouchableOpacity>
       </View>
     </View>
