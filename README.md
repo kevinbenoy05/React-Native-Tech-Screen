@@ -11,12 +11,12 @@ This is a basic Task Manager application developed using React Native and Expo, 
 - Node.js and NPM installed on your machine
 - Expo Go app on iOS/Android device, or an emulator set up on computer
 ### Installation
-1. Clone the Repository: 'git clone https://github.com/kevinbenoy05/React-Native-Tech-Screen'
-2. Go to the project folder in bash terminal: 'cd [Parent_Directory_Location]\React-Native-Tech-Screen'
-3. Install all required dependencies: 'npm install'
-4. Run the application by using 'npx expo start'. You can then scan the QR Code to load on iOS/Andriud or your emulary. 
+1. Clone the Repository: `git clone https://github.com/kevinbenoy05/React-Native-Tech-Screen`
+2. Go to the project folder in bash terminal: `cd [Parent_Directory_Location]\React-Native-Tech-Screen`
+3. Install all required dependencies: `npm install`
+4. Run the application by using `npx expo start`. You can then scan the QR Code to load on iOS/Andriud or your emulary. 
 ## 3rd Party Sources
-- Used Nativewind to style React Native components
-- Used 'react-native-vector-icons' image library for the check and trash buttons
+- Used Nativewind and Tailwind CSS to style React Native components
+- Used `react-native-vector-icons` image library for the check and trash buttons - specifically the `Feather` script
 - React Native Tutorial as this is my first time working with React Native: (JS Mastery)[https://www.youtube.com/watch?v=f8Z9JyB2EIE&t=8348s&pp=ygUVUmVhY3QgTmF0aXZlIFR1dG9yaWFs]
 
