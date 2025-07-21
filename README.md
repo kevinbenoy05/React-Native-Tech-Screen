@@ -19,4 +19,5 @@ This is a basic Task Manager application developed using React Native and Expo, 
 - Used Nativewind and Tailwind CSS to style React Native components
 - Used `react-native-vector-icons` image library for the check and trash buttons - specifically the `Feather` script
 - React Native Tutorial as this is my first time working with React Native: (JS Mastery)[https://www.youtube.com/watch?v=f8Z9JyB2EIE&t=8348s&pp=ygUVUmVhY3QgTmF0aXZlIFR1dG9yaWFs]
+- Used AI tools to help generate and find styling classes in order to focus on core React logic
 
